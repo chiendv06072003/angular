@@ -1,0 +1,39 @@
+<div class="flex">
+  <div
+    class="text-transparent bg-gradient-to-r from-pink-500 to-violet-500 w-1/4 px-4 rounded-s-xl"
+  >
+    <div class="">
+      <img
+        class="w-3/4 p-4 rounded-full"
+        src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/hinh-anh-logo-mu-hinh-nen-logo-mu.jpg"
+        alt=""
+      />
+    </div>
+    <ul class="text-lg grid grid-rows-6 gap-y-3 mx-2 py-6">
+      <a
+        class="text-white hover:bg-sky-600 h-10 pt-1 w-full pl-4 rounded-lg no-underline"
+        routerLink="/admin"
+        >Dashbroad</a
+      >
+      <a
+        class="text-white hover:bg-sky-600 h-10 pt-1 w-full pl-4 rounded-lg no-underline"
+        routerLink="/admin/product"
+        >Products</a
+      >
+      <a
+        class="text-white hover:bg-sky-600 h-10 pt-1 w-full pl-4 rounded-lg no-underline"
+        routerLink="/admin"
+        >User</a
+      >
+      <a
+        class="text-white hover:bg-sky-600 h-10 pt-1 w-full pl-4 rounded-lg no-underline"
+        routerLink=""
+        >Back</a
+      >
+    </ul>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<app-footer></app-footer>

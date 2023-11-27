@@ -1,0 +1,45 @@
+<h1 class="ml-5 mt-3">{{ mode == "create" ? "Thêm" : "Cập nhật" }} sản phẩm</h1>
+<form class="ml-5 mt-3" (ngSubmit)="onSubmit()" [formGroup]="productForm">
+  <div class="mb-3">
+    <label for="name" class="form-label">Tên sản phẩm</label>
+    <input
+      type="text"
+      class="form-control"
+      id="name"
+      placeholder="Tên sản phẩm"
+      formControlName="name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Ảnh</label>
+    <input
+      type="text"
+      class="form-control"
+      id="image"
+      placeholder="Ảnh"
+      formControlName="image"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Giá</label>
+    <input
+      type="text"
+      class="form-control"
+      id="price"
+      placeholder="Giá"
+      formControlName="price"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="desc" class="form-label">Mô tả</label>
+    <textarea
+      class="form-control"
+      id="desc"
+      rows="3"
+      formControlName="desc"
+    ></textarea>
+  </div>
+  <button class="btn btn-primary" type="submit">
+    {{ mode == "create" ? "Thêm" : "Cập nhật" }} sản phẩm
+  </button>
+</form>

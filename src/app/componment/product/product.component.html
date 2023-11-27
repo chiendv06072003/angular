@@ -1,0 +1,41 @@
+<div *ngIf="products">
+  <div class="ml-5 mt-3">
+    <h2>Quản lý sản phẩm</h2>
+    <button class="btn btn-primary mt-3" routerLink="/admin/product/add">
+      Thêm
+    </button>
+  </div>
+  <hr />
+  <table class="table-fixed border-separate border-spacing-4">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Ảnh</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Mô tả</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ product.name }}</td>
+        <td><img [src]="product.image" alt="" /></td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.desc }}</td>
+        <td width="200">
+          <button class="btn btn-danger" (click)="removeProduct(product.id!)">
+            Xóa
+          </button>
+          <button
+            class="btn btn-success ms-2"
+            routerLink="/admin/product/{{ product.id }}/edit"
+          >
+            Sửa
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
